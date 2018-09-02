@@ -10,25 +10,30 @@ import UIKit
 
 class BrewController: UIViewController {
     
-    
     @IBOutlet weak var literLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var textLabel2: UILabel!
     @IBOutlet weak var waterLabel: UILabel!
     @IBOutlet weak var ozLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    
     var coffeeLabelValue: String = ""
     var water: Int = 0
     var segmentedControlSelection: Int!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setNeedsStatusBarAppearanceUpdate()
         
-        textLabel.text = "WATER NEEDED"
-        textLabel2.text = "BREW TIME"
-        
+        setUpCalculations()
+        setUpLabels()
+    }
+}
+
+extension BrewController {
+    
+    fileprivate func setUpCalculations() {
         switch segmentedControlSelection {
         case 0:
             water = Int(round(Float(coffeeLabelValue)!*(500/30)))
@@ -42,29 +47,13 @@ class BrewController: UIViewController {
         default:
             break
         }
+    }
+    
+    fileprivate func setUpLabels() {
+        textLabel.text = "WATER NEEDED"
+        textLabel2.text = "BREW TIME"
         ozLabel.text = "~" + String(water/28) + " oz"
         literLabel.text = "~" + String(Float(water)/1000) + " liter"
         waterLabel.text = String(water)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    //MARK - Actions
-    
-    @IBAction func cancel(_ sender: Any) {
-        navigationController!.popViewController(animated: true)
     }
 }

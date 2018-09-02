@@ -14,26 +14,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var coffeeText: UITextField!
+    
     var segmentedControlSelection: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         coffeeText.delegate = self
-        
-        self.coffeeText.keyboardType = UIKeyboardType.numberPad
+        coffeeText.keyboardType = UIKeyboardType.numberPad
         
         setNeedsStatusBarAppearanceUpdate()
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -95,7 +89,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //MARK: Actions
 
     @IBAction func tapDown(_ sender: UIButton) {
-    
         let value: Int? = Int(coffeeText.text!)!
         coffeeText.text = String(value! - 1)
         
@@ -110,7 +103,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tapUp(_ sender: UIButton) {
-
         let value: Int? = Int(coffeeText.text!)!
          coffeeText.text = String(value! + 1)
         
@@ -123,9 +115,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
            break
         }
     }
+    
     @IBAction func indexChanged(_ sender: Any) {
         segmentedControlSelection = segmentedControl.selectedSegmentIndex
     }
-    
 }
-
