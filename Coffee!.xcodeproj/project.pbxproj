@@ -10,7 +10,6 @@
 		3353071120E801F10098CC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353071020E801F10098CC10 /* AppDelegate.swift */; };
 		3353071320E801F10098CC10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353071220E801F10098CC10 /* ViewController.swift */; };
 		3353071620E801F10098CC10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353071420E801F10098CC10 /* Main.storyboard */; };
-		3353071920E801F10098CC10 /* Coffee_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3353071720E801F10098CC10 /* Coffee_.xcdatamodeld */; };
 		3353071B20E801F20098CC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3353071A20E801F20098CC10 /* Assets.xcassets */; };
 		3353071E20E801F20098CC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353071C20E801F20098CC10 /* LaunchScreen.storyboard */; };
 		338AF346211C55E200814528 /* BrewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AF345211C55E200814528 /* BrewController.swift */; };
@@ -32,7 +31,6 @@
 		3353071020E801F10098CC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3353071220E801F10098CC10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3353071520E801F10098CC10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3353071820E801F10098CC10 /* Coffee_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Coffee_.xcdatamodel; sourceTree = "<group>"; };
 		3353071A20E801F20098CC10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3353071D20E801F20098CC10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3353071F20E801F20098CC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 				3353071A20E801F20098CC10 /* Assets.xcassets */,
 				3353071C20E801F20098CC10 /* LaunchScreen.storyboard */,
 				3353071F20E801F20098CC10 /* Info.plist */,
-				3353071720E801F10098CC10 /* Coffee_.xcdatamodeld */,
 			);
 			path = "Coffee!";
 			sourceTree = "<group>";
@@ -256,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3353071320E801F10098CC10 /* ViewController.swift in Sources */,
-				3353071920E801F10098CC10 /* Coffee_.xcdatamodeld in Sources */,
 				3353071120E801F10098CC10 /* AppDelegate.swift in Sources */,
 				338AF346211C55E200814528 /* BrewController.swift in Sources */,
 			);
@@ -520,19 +516,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		3353071720E801F10098CC10 /* Coffee_.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3353071820E801F10098CC10 /* Coffee_.xcdatamodel */,
-			);
-			currentVersion = 3353071820E801F10098CC10 /* Coffee_.xcdatamodel */;
-			path = Coffee_.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3353070520E801F10098CC10 /* Project object */;
 }
