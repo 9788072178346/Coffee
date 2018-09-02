@@ -48,7 +48,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ERo-15-4xK" kind="show" id="fAq-jn-vCr"/>
+                                    <segue destination="ERo-15-4xK" kind="show" identifier="segueToBrew" id="fAq-jn-vCr"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qE0-4L-pJm">
@@ -125,7 +125,6 @@
                     <connections>
                         <outlet property="coffeeText" destination="nBb-N2-Ihn" id="Qwq-q7-0ai"/>
                         <outlet property="segmentedControl" destination="qE0-4L-pJm" id="JcV-Zd-6hB"/>
-                        <segue destination="ERo-15-4xK" kind="show" id="tGE-EH-VOb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -269,7 +268,4 @@
         <image name="Image" width="131" height="153"/>
         <image name="Up" width="64" height="64"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="fAq-jn-vCr"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -17,6 +17,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var segmentedControlSelection: Int = 0
     
+    struct Constants {
+        static let segueToBrew = "segueToBrew"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,8 +35,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? BrewController {
-            vc.coffeeLabelValue = coffeeText.text!
+        if segue.identifier == Constants.segueToBrew, let vc = segue.destination as? BrewController, let grams = coffeeText.text {
+            vc.coffeeLabelValue = grams
             vc.segmentedControlSelection = segmentedControlSelection
         }
     }
