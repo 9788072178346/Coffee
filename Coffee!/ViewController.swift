@@ -16,8 +16,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var coffeeText: UITextField!
     var segmentedControlSelection: Int = 0
     
-    override var prefersStatusBarHidden: Bool { return true }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,10 +34,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

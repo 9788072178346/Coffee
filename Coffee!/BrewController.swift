@@ -20,8 +20,6 @@ class BrewController: UIViewController {
     var coffeeLabelValue: String = ""
     var water: Int = 0
     var segmentedControlSelection: Int!
-    
-    override var prefersStatusBarHidden: Bool { return true }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,11 +51,6 @@ class BrewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
 
     /*
     // MARK: - Navigation
