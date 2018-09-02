@@ -13,7 +13,6 @@
 		3353071920E801F10098CC10 /* Coffee_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3353071720E801F10098CC10 /* Coffee_.xcdatamodeld */; };
 		3353071B20E801F20098CC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3353071A20E801F20098CC10 /* Assets.xcassets */; };
 		3353071E20E801F20098CC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353071C20E801F20098CC10 /* LaunchScreen.storyboard */; };
-		3353072920E801F20098CC10 /* Coffee_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353072820E801F20098CC10 /* Coffee_Tests.swift */; };
 		338AF346211C55E200814528 /* BrewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AF345211C55E200814528 /* BrewController.swift */; };
 		87E7A276D8F497FA32F13203 /* Pods_Coffee_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8830FEBC935082377DE45 /* Pods_Coffee_.framework */; };
 /* End PBXBuildFile section */
@@ -38,8 +37,6 @@
 		3353071D20E801F20098CC10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3353071F20E801F20098CC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3353072420E801F20098CC10 /* Coffee!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3353072820E801F20098CC10 /* Coffee_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_Tests.swift; sourceTree = "<group>"; };
-		3353072A20E801F20098CC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		338AF345211C55E200814528 /* BrewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewController.swift; sourceTree = "<group>"; };
 		5AD8830FEBC935082377DE45 /* Pods_Coffee_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF25A35CA962E95F2B29390 /* Pods-Coffee!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee!.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coffee!/Pods-Coffee!.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				3353070F20E801F10098CC10 /* Coffee! */,
-				3353072720E801F20098CC10 /* Coffee!Tests */,
 				3353070E20E801F10098CC10 /* Products */,
 				E8FEA93031FF1A485539D15A /* Pods */,
 				0C3D7DF560FD03EB8FE2F776 /* Frameworks */,
@@ -106,15 +102,6 @@
 				3353071720E801F10098CC10 /* Coffee_.xcdatamodeld */,
 			);
 			path = "Coffee!";
-			sourceTree = "<group>";
-		};
-		3353072720E801F20098CC10 /* Coffee!Tests */ = {
-			isa = PBXGroup;
-			children = (
-				3353072820E801F20098CC10 /* Coffee_Tests.swift */,
-				3353072A20E801F20098CC10 /* Info.plist */,
-			);
-			path = "Coffee!Tests";
 			sourceTree = "<group>";
 		};
 		E8FEA93031FF1A485539D15A /* Pods */ = {
@@ -281,7 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3353072920E801F20098CC10 /* Coffee_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
