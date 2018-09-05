@@ -3,6 +3,4 @@ platform :ios, '9.0'
 
 target 'Coffee!' do
     use_frameworks!
-    pod 'IQKeyboardManagerSwift'
-
 end
