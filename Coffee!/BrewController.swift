@@ -11,8 +11,8 @@ import UIKit
 class BrewController: UIViewController {
     
     @IBOutlet weak var literLabel: UILabel!
-    @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet weak var textLabel2: UILabel!
+    @IBOutlet weak var waterNeededLabel: UILabel!
+    @IBOutlet weak var brewTimeLabel: UILabel!
     @IBOutlet weak var waterLabel: UILabel!
     @IBOutlet weak var ozLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -50,8 +50,8 @@ extension BrewController {
     }
     
     fileprivate func setUpLabels() {
-        textLabel.text = "WATER NEEDED"
-        textLabel2.text = "BREW TIME"
+        waterNeededLabel.text = "WATER NEEDED"
+        brewTimeLabel.text = "BREW TIME"
         ozLabel.text = "~" + String(water/28) + " oz"
         literLabel.text = "~" + String(Float(water)/1000) + " liter"
         waterLabel.text = String(water)
