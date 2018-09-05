@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var segmentedControlSelection: Int = 0
     
-    struct Constants {
+    private struct Constants {
         static let segueToBrew = "segueToBrew"
     }
     
