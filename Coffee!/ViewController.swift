@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
     
     //MARK: Properties
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    @IBOutlet weak var coffeeText: UITextField!
+    @IBOutlet weak var coffeeLabel: UILabel!
     
     var segmentedControlSelection: Int = 0
     
@@ -24,42 +24,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        coffeeText.delegate = self
-        coffeeText.keyboardType = UIKeyboardType.numberPad
-        
         setNeedsStatusBarAppearanceUpdate()
-        
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-        tap.cancelsTouchesInView = false
-        self.view.addGestureRecognizer(tap)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Constants.segueToBrew, let vc = segue.destination as? BrewController, let grams = coffeeText.text {
+        if segue.identifier == Constants.segueToBrew, let vc = segue.destination as? BrewController, let grams = coffeeLabel.text {
             vc.coffeeLabelValue = grams
             vc.segmentedControlSelection = segmentedControlSelection
-        }
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let text = textField.text, !text.isEmpty else {
-            textField.text = "15"
-            return
-        }
-    
-        let value: Int = Int(textField.text!)!
-        
-        switch value {
-        case 0:
-            noCoffeeAlert(textField: textField)
-        case (1...14):
-            notEnoughCofeeAlert(textField: textField)
-        case (15...45):
-            return
-        case (46...60):
-            tooMuchCoffeeAlert()
-        default:
-            revertTo30(textField: textField)
         }
     }
     
@@ -93,28 +64,42 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //MARK: Actions
 
     @IBAction func tapDown(_ sender: UIButton) {
-        let value: Int? = Int(coffeeText.text!)!
-        coffeeText.text = String(value! - 1)
+        guard let textCoffeeLabel = coffeeLabel.text, let value = Int(textCoffeeLabel) else {
+            // if no value
+            self.coffeeLabel.text = "30"
+            return
+        }
+        
+        coffeeLabel.text = String(value - 1)
         
         switch value {
         case 1:
-            noCoffeeAlert(textField: coffeeText)
+            // no coffee
+            break
         case 15:
-            notEnoughCofeeAlert(textField: coffeeText)
+           // not enough coffee
+            break
         default:
             break
         }
     }
     
     @IBAction func tapUp(_ sender: UIButton) {
-        let value: Int? = Int(coffeeText.text!)!
-         coffeeText.text = String(value! + 1)
+        guard let textCoffeeLabel = coffeeLabel.text, let value = Int(textCoffeeLabel) else {
+            // if no value
+            self.coffeeLabel.text = "30"
+            return
+        }
+        
+        coffeeLabel.text = String(value + 1)
         
         switch value {
         case 45:
-            tooMuchCoffeeAlert()
+            // too much coffee
+            break
         case 60:
-            revertTo30(textField: coffeeText)
+            // revert to more sensible option
+            break
         default:
            break
         }
