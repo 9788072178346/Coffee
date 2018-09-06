@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setNeedsStatusBarAppearanceUpdate()
+        setTransparentNavigationBar()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,6 +35,12 @@ class ViewController: UIViewController {
     }
     
     //MARK: Custom functions
+    
+    func setTransparentNavigationBar() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
     
     func noCoffeeAlert(textField: UITextField) {
         let alert = UIAlertController(title: "No Coffee", message: "How are you going to make coffee with no coffee?", preferredStyle: .alert)

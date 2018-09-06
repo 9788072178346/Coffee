@@ -168,13 +168,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="~18 oz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZ4-PG-Mvb">
-                                <rect key="frame" x="20" y="459.66666666666669" width="255" height="28.666666666666686"/>
+                                <rect key="frame" x="20" y="460" width="255" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nmY-cP-eXG">
-                                <rect key="frame" x="20.000000000000014" y="316" width="255.33333333333337" height="135.66666666666663"/>
+                                <rect key="frame" x="20.000000000000014" y="316.33333333333331" width="255.33333333333337" height="135.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLACEHOLDER" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZS-je-yym">
                                         <rect key="frame" x="0.0" y="0.0" width="101.33333333333333" height="17"/>
@@ -209,7 +209,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="~0.5 liter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thi-p1-u3t">
-                                <rect key="frame" x="20" y="494" width="255" height="29"/>
+                                <rect key="frame" x="20" y="494.33333333333331" width="255" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -279,4 +279,5 @@
         <image name="Image" width="131" height="153"/>
         <image name="Up" width="64" height="64"/>
     </resources>
+    <color key="tintColor" red="0.075534326420000006" green="0.075534326420000006" blue="0.075534326420000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
