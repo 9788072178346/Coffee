@@ -26,9 +26,7 @@ class BrewController: UIViewController {
         
         self.navigationController!.navigationBar.topItem!.title = ""
 
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
+        setTransparentNavigationBar()
         
         setUpCalculations()
         setUpLabels()
