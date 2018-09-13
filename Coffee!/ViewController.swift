@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var coffeeLabel: UILabel!
     
-    var segmentedControlSelection: Int = 0
+    var segmentedControlSelection = 0
     
     private struct Constants {
         static let segueToBrew = "segueToBrew"

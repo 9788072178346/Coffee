@@ -17,8 +17,8 @@ class BrewController: UIViewController {
     @IBOutlet weak var ozLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    var coffeeLabelValue: String = ""
-    var water: Int = 0
+    var coffeeLabelValue = ""
+    var water = 0
     var segmentedControlSelection: Int!
     
     override func viewDidLoad() {
