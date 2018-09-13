@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var coffeeLabel: UILabel!
     
+    var grams = 30
     var segmentedControlSelection = 0
     
     private struct Constants {
@@ -61,18 +62,25 @@ class ViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+    func createAlert(title: String, message: String, style: UIAlertControllerStyle, alertTitle: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+        
+        alert.addAction(UIAlertAction(title: alertTitle, style: .cancel, handler: nil))
+        
+        present(alert, animated: true)
+    }
+    
+    func updateCoffeeLabelValue(value: Int) {
+        coffeeLabel.text = String(value)
+    }
+    
     //MARK: Actions
 
     @IBAction func tapDown(_ sender: UIButton) {
-        guard let textCoffeeLabel = coffeeLabel.text, let value = Int(textCoffeeLabel) else {
-            // if no value
-            self.coffeeLabel.text = "30"
-            return
-        }
+        grams -= 1
+        updateCoffeeLabelValue(value: grams)
         
-        coffeeLabel.text = String(value - 1)
-        
-        switch value {
+        switch grams {
         case 1:
             // no coffee
             break
@@ -85,15 +93,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapUp(_ sender: UIButton) {
-        guard let textCoffeeLabel = coffeeLabel.text, let value = Int(textCoffeeLabel) else {
-            // if no value
-            self.coffeeLabel.text = "30"
-            return
-        }
+        grams += 1
+        updateCoffeeLabelValue(value: grams)
         
-        coffeeLabel.text = String(value + 1)
-        
-        switch value {
+        switch grams {
         case 45:
             // too much coffee
             break

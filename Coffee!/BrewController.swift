@@ -17,7 +17,7 @@ class BrewController: UIViewController {
     @IBOutlet weak var ozLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    var coffeeLabelValue = ""
+    var grams = 0
     var water = 0
     var segmentedControlSelection: Int!
     
@@ -38,13 +38,13 @@ extension BrewController {
     fileprivate func setUpCalculations() {
         switch segmentedControlSelection {
         case 0:
-            water = Int(round(Float(coffeeLabelValue)!*(500/30)))
+            water = Int(round(Float(grams)*(500/30)))
             timeLabel.text = "3 - 4 min."
         case 1:
-            water = Int(round(Float(coffeeLabelValue)!*(900/60)))
+            water = Int(round(Float(grams)*(900/60)))
             timeLabel.text = "4 min."
         case 2:
-            water = Int(round(Float(coffeeLabelValue)!*(1000/60)))
+            water = Int(round(Float(grams)*(1000/60)))
             timeLabel.text = "4 min."
         default:
             break
