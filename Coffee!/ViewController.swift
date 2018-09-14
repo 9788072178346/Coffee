@@ -29,8 +29,8 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Constants.segueToBrew, let vc = segue.destination as? BrewController, let grams = coffeeLabel.text {
-            vc.coffeeLabelValue = grams
+        if segue.identifier == Constants.segueToBrew, let vc = segue.destination as? BrewController {
+            vc.grams = grams
             vc.segmentedControlSelection = segmentedControlSelection
         }
     }
