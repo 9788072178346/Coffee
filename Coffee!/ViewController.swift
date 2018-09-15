@@ -37,35 +37,13 @@ class ViewController: UIViewController {
     
     //MARK: Custom functions
     
-    func noCoffeeAlert(textField: UITextField) {
-        let alert = UIAlertController(title: "No Coffee", message: "How are you going to make coffee with no coffee?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Right", style: .default, handler: { action in textField.text = "1"}))
-        self.present(alert, animated: true)
-    }
-    
-    func notEnoughCofeeAlert(textField: UITextField) {
-        let alert = UIAlertController(title: "Are you sure?", message: "That is a really small amount of coffee. One cup of filter coffee usually equals 250 mililitres of water, that is 15 grams of ground coffee.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "You're right", style: .default, handler: { action in textField.text = "15"}))
-        alert.addAction(UIAlertAction(title: "I'm sure", style: .cancel, handler: nil))
-        self.present(alert, animated: true)
-    }
-    
-    func tooMuchCoffeeAlert() {
-        let alert = UIAlertController(title: "Are you sure?", message: "That is a lot of coffee. Are you seriously brewing that much at once?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "I'm sure", style: .cancel, handler: nil))
-        self.present(alert, animated: true)
-    }
-    
-    func revertTo30(textField: UITextField) {
-        let alert = UIAlertController(title: "Seriously?", message: "You must be kidding, right?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Right", style: .cancel, handler: {action in textField.text = "30"}))
-        self.present(alert, animated: true)
-    }
-    
-    func createAlert(title: String, message: String, style: UIAlertControllerStyle, alertTitle: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+    func createAlert(title: String, message: String, value: Int, includeCloseAlert: Bool) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: alertTitle, style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "You're right", style: .default, handler: {action in self.setGrams(value: value)}))
+        if(includeCloseAlert) {
+            alert.addAction(UIAlertAction(title: "I'm sure", style: .cancel, handler: nil))
+        }
         
         present(alert, animated: true)
     }
@@ -74,18 +52,23 @@ class ViewController: UIViewController {
         coffeeLabel.text = String(value)
     }
     
+    func setGrams(value: Int) {
+        grams = value
+        updateCoffeeLabelValue(value: grams)
+    }
+    
     //MARK: Actions
 
     @IBAction func tapDown(_ sender: UIButton) {
         grams -= 1
-        updateCoffeeLabelValue(value: grams)
+        setGrams(value: grams)
         
         switch grams {
-        case 1:
-            // no coffee
+        case 0:
+            createAlert(title: "No coffee", message: "How are you going to make coffee with no coffee?", value: 1, includeCloseAlert: false)
             break
-        case 15:
-           // not enough coffee
+        case 14:
+           createAlert(title: "Are you sure?", message: "That is a really small amount of coffee. One cup of filter coffee usually equals 250 mililitres of water, that is 15 grams of ground coffee.", value: 15, includeCloseAlert: true)
             break
         default:
             break
@@ -94,14 +77,14 @@ class ViewController: UIViewController {
     
     @IBAction func tapUp(_ sender: UIButton) {
         grams += 1
-        updateCoffeeLabelValue(value: grams)
+        setGrams(value: grams)
         
         switch grams {
-        case 45:
-            // too much coffee
+        case 46:
+            createAlert(title: "Are you sure?", message: "That is a lot of coffee. Are you seriously brewing that much at once?", value: 30, includeCloseAlert: true)
             break
-        case 60:
-            // revert to more sensible option
+        case 100:
+            createAlert(title: "Too much", message: "If you're going to brew that much filter coffee at once, it won't be as good as it should be.", value: 30, includeCloseAlert: false)
             break
         default:
            break
