@@ -16,7 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var coffeeLabel: UILabel!
     
     var grams = 30
-    var segmentedControlSelection = 0
+    private var method: PreparationMethod = .drip
+    
+    private var selectedSegmentIndex = 0 {
+        didSet{
+            method = PreparationMethod(rawValue: selectedSegmentIndex) ?? .drip
+        }
+    }
     
     private struct Constants {
         static let segueToBrew = "segueToBrew"
@@ -29,10 +35,16 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Constants.segueToBrew, let vc = segue.destination as? BrewController {
-            vc.grams = grams
-            vc.segmentedControlSelection = segmentedControlSelection
+        guard segue.identifier == Constants.segueToBrew else {
+            return
         }
+        
+        guard let vc = segue.destination as? BrewController else {
+            return
+        }
+        
+        vc.grams = grams
+        vc.method = method
     }
     
     //MARK: Custom functions
@@ -92,6 +104,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func indexChanged(_ sender: Any) {
-        segmentedControlSelection = segmentedControl.selectedSegmentIndex
+        selectedSegmentIndex = segmentedControl.selectedSegmentIndex
     }
 }

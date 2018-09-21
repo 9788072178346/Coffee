@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		332268712142CC140068FEA2 /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332268702142CC140068FEA2 /* ViewController+Extensions.swift */; };
+		333184B22153C92400D7DC9C /* PreparationMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333184B12153C92400D7DC9C /* PreparationMethod.swift */; };
 		3353071120E801F10098CC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353071020E801F10098CC10 /* AppDelegate.swift */; };
 		3353071320E801F10098CC10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353071220E801F10098CC10 /* ViewController.swift */; };
 		3353071620E801F10098CC10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353071420E801F10098CC10 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		332268702142CC140068FEA2 /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
+		333184B12153C92400D7DC9C /* PreparationMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationMethod.swift; sourceTree = "<group>"; };
 		3353070D20E801F10098CC10 /* Coffee!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3353071020E801F10098CC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3353071220E801F10098CC10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		333184B32153C9DB00D7DC9C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3353071220E801F10098CC10 /* ViewController.swift */,
+				338AF345211C55E200814528 /* BrewController.swift */,
+			);
+			name = ViewControllers;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		333184B42153C9FB00D7DC9C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				332268702142CC140068FEA2 /* ViewController+Extensions.swift */,
+			);
+			name = Extensions;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		333184B52153CA2300D7DC9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3353071420E801F10098CC10 /* Main.storyboard */,
+				3353071A20E801F20098CC10 /* Assets.xcassets */,
+				3353071C20E801F20098CC10 /* LaunchScreen.storyboard */,
+				3353071F20E801F20098CC10 /* Info.plist */,
+			);
+			name = Resources;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		3353070420E801F10098CC10 = {
 			isa = PBXGroup;
 			children = (
@@ -78,13 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				3353071020E801F10098CC10 /* AppDelegate.swift */,
-				3353071220E801F10098CC10 /* ViewController.swift */,
-				332268702142CC140068FEA2 /* ViewController+Extensions.swift */,
-				338AF345211C55E200814528 /* BrewController.swift */,
-				3353071420E801F10098CC10 /* Main.storyboard */,
-				3353071A20E801F20098CC10 /* Assets.xcassets */,
-				3353071C20E801F20098CC10 /* LaunchScreen.storyboard */,
-				3353071F20E801F20098CC10 /* Info.plist */,
+				333184B12153C92400D7DC9C /* PreparationMethod.swift */,
+				333184B32153C9DB00D7DC9C /* ViewControllers */,
+				333184B42153C9FB00D7DC9C /* Extensions */,
+				333184B52153CA2300D7DC9C /* Resources */,
 			);
 			path = "Coffee!";
 			sourceTree = "<group>";
@@ -190,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				333184B22153C92400D7DC9C /* PreparationMethod.swift in Sources */,
 				332268712142CC140068FEA2 /* ViewController+Extensions.swift in Sources */,
 				3353071320E801F10098CC10 /* ViewController.swift in Sources */,
 				3353071120E801F10098CC10 /* AppDelegate.swift in Sources */,
@@ -353,7 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Coffee!/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Coffee!/New Group1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,7 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Coffee!/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Coffee!/New Group1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

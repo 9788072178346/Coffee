@@ -19,13 +19,8 @@ class BrewController: UIViewController {
     
     var grams = 0
     var water = 0
-    var segmentedControlSelection: Int!
     
-    enum PreparationMethod: Int {
-        case drip = 0
-        case frenchPress = 1
-        case auto = 2
-    }
+    var method: PreparationMethod?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,13 +37,11 @@ class BrewController: UIViewController {
 extension BrewController {
     
     fileprivate func evaluate() {
-        if let value = PreparationMethod(rawValue: segmentedControlSelection) {
-            switch value {
+        switch method ?? .drip {
             case .drip, .auto:
                 water = Int(round(Float(grams)*(500/30)))
             case .frenchPress:
                 water = Int(round(Float(grams)*(900/60)))
-            }
         }
     }
 
@@ -59,13 +52,11 @@ extension BrewController {
         literLabel.text = "~" + String(Float(water)/1000) + " liter"
         waterLabel.text = String(water)
         
-        if let value = PreparationMethod(rawValue: segmentedControlSelection) {
-            switch value {
+        switch method ?? .drip {
             case .drip:
                 timeLabel.text = "3 - 4 min."
             case .frenchPress, .auto:
                 timeLabel.text = "4 min."
-            }
         }
     }
 }
