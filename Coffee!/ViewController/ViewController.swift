@@ -26,6 +26,17 @@ class ViewController: UIViewController {
     
     private struct Constants {
         static let segueToBrew = "segueToBrew"
+        
+        static let defaultStyleTitle = "You're right"
+        static let cancelStyleTitle = "I'm sure"
+        static let noCoffeeTitle = "No coffee"
+        static let areYouSureTitle = "Are you sure?"
+        static let tooMuchTitle = "Too much"
+        
+        static let noCoffeeMessage = "How are you going to make coffee with no coffee?"
+        static let notEnoughCoffeeMessage = "That is a really small amount of coffee. One cup of filter coffee usually equals 250 mililitres of water, that is 15 grams of ground coffee."
+        static let aLotOfCoffeeMessage = "That is a lot of coffee. Are you seriously brewing that much at once?"
+        static let tooMuchCoffeeMessage = "If you're going to brew that much filter coffee at once, it won't be as good as it should be."
     }
     
     override func viewDidLoad() {
@@ -52,9 +63,9 @@ class ViewController: UIViewController {
     func createAlert(title: String, message: String, value: Int, includeCloseAlert: Bool) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "You're right", style: .default, handler: {action in self.setGrams(value: value)}))
+        alert.addAction(UIAlertAction(title: Constants.defaultStyleTitle, style: .default, handler: {action in self.setGrams(value: value)}))
         if(includeCloseAlert) {
-            alert.addAction(UIAlertAction(title: "I'm sure", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: Constants.cancelStyleTitle, style: .cancel, handler: nil))
         }
         
         present(alert, animated: true)
@@ -77,10 +88,10 @@ class ViewController: UIViewController {
         
         switch grams {
         case 0:
-            createAlert(title: "No coffee", message: "How are you going to make coffee with no coffee?", value: 1, includeCloseAlert: false)
+            createAlert(title: Constants.noCoffeeTitle, message: Constants.noCoffeeMessage, value: 1, includeCloseAlert: false)
             break
         case 14:
-           createAlert(title: "Are you sure?", message: "That is a really small amount of coffee. One cup of filter coffee usually equals 250 mililitres of water, that is 15 grams of ground coffee.", value: 15, includeCloseAlert: true)
+           createAlert(title: Constants.areYouSureTitle, message: Constants.notEnoughCoffeeMessage, value: 15, includeCloseAlert: true)
             break
         default:
             break
@@ -93,10 +104,10 @@ class ViewController: UIViewController {
         
         switch grams {
         case 46:
-            createAlert(title: "Are you sure?", message: "That is a lot of coffee. Are you seriously brewing that much at once?", value: 30, includeCloseAlert: true)
+            createAlert(title: Constants.areYouSureTitle, message: Constants.aLotOfCoffeeMessage, value: 30, includeCloseAlert: true)
             break
         case 100:
-            createAlert(title: "Too much", message: "If you're going to brew that much filter coffee at once, it won't be as good as it should be.", value: 30, includeCloseAlert: false)
+            createAlert(title: Constants.tooMuchTitle, message: Constants.tooMuchCoffeeMessage, value: 30, includeCloseAlert: false)
             break
         default:
            break
