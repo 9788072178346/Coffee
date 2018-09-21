@@ -15,6 +15,7 @@
 		3353071B20E801F20098CC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3353071A20E801F20098CC10 /* Assets.xcassets */; };
 		3353071E20E801F20098CC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353071C20E801F20098CC10 /* LaunchScreen.storyboard */; };
 		338AF346211C55E200814528 /* BrewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AF345211C55E200814528 /* BrewController.swift */; };
+		33FD76122154E7FC002CE834 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FD76112154E7FC002CE834 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		3353071F20E801F20098CC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3353072420E801F20098CC10 /* Coffee!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		338AF345211C55E200814528 /* BrewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewController.swift; sourceTree = "<group>"; };
+		33FD76112154E7FC002CE834 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				3353071020E801F10098CC10 /* AppDelegate.swift */,
 				333184B12153C92400D7DC9C /* PreparationMethod.swift */,
+				33FD76112154E7FC002CE834 /* Constants.swift */,
 				333184B32153C9DB00D7DC9C /* ViewControllers */,
 				333184B42153C9FB00D7DC9C /* Extensions */,
 				333184B52153CA2300D7DC9C /* Resources */,
@@ -225,6 +228,7 @@
 				3353071320E801F10098CC10 /* ViewController.swift in Sources */,
 				3353071120E801F10098CC10 /* AppDelegate.swift in Sources */,
 				338AF346211C55E200814528 /* BrewController.swift in Sources */,
+				33FD76122154E7FC002CE834 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
