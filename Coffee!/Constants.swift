@@ -7,6 +7,8 @@
 //
 
 struct Constants {
+    static var pendingIndex = 0 
+    
     static let segueToBrew = "segueToBrew"
     
     static let defaultStyleTitle = "You're right"

@@ -20,7 +20,7 @@ class BrewController: UIViewController {
     var grams = 30
     var water = 0
     
-    var method: PreparationMethod?
+    var method: PreparationMethod = PreparationMethod(rawValue: Constants.pendingIndex) ?? .drip
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +95,7 @@ class BrewController: UIViewController {
 extension BrewController {
     
     fileprivate func evaluate() {
-        switch method ?? .drip {
+        switch method {
             case .drip, .auto:
                 water = Int(round(Float(grams)*(500/30)))
             case .frenchPress:
@@ -113,7 +113,7 @@ extension BrewController {
         /*ozLabel.text = "~" + String(water/28) + " oz"
         literLabel.text = "~" + String(Float(water)/1000) + " liter"*/
         
-        switch method ?? .drip {
+        switch method {
             case .drip:
                 timeLabel.text = "3 - 4 min"
                 typeLabel.text = "Drip"

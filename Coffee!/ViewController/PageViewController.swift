@@ -51,10 +51,10 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
-        // set the pageControl.currentPage to the index of the current viewController in pages
         if let viewControllers = pageViewController.viewControllers {
             if let viewControllerIndex = brewOptionsViewControllers.index(of: viewControllers[0]) {
-                self.pageControl.currentPage = viewControllerIndex
+                pageControl.currentPage = viewControllerIndex
+                Constants.pendingIndex = pageControl.currentPage
             }
         }
     }
