@@ -63,8 +63,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     
     private(set) lazy var brewOptionsViewControllers: [UIViewController] = {
         return [self.newViewController(brewMethod: "drip"),
-                self.newViewController(brewMethod: "frenchPress"),
-                self.newViewController(brewMethod: "auto")
+                self.newViewController(brewMethod: "frenchPress")
             ]
     }()
     

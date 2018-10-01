@@ -21,4 +21,8 @@ struct Constants {
     static let notEnoughCoffeeMessage = "That is a really small amount of coffee. One cup of filter coffee usually equals 250 mililitres of water, that is 15 grams of ground coffee."
     static let aLotOfCoffeeMessage = "That is a lot of coffee. Are you seriously brewing that much at once?"
     static let tooMuchCoffeeMessage = "If you're going to brew that much filter coffee at once, it won't be as good as it should be."
+    
+    static let aboutDrip = "Brewed coffee done with pour-over method is made by pouring hot water onto ground coffee beans. It is said to provide the most clarity of flavour as it achieves a nuanced, well-rounded drink."
+    static let aboutFrenchPress = "French press, method of choice of many, is beautiful in its simplicity. The secret of creating an earthy and rich taste is in the grind: medium, with uniformity and consistency throughout."
+    
 }

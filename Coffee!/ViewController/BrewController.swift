@@ -10,7 +10,8 @@ import UIKit
 
 class BrewController: UIViewController {
     
-    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var typeBrewLabel: UILabel!
+    @IBOutlet weak var aboutBrewMethodLabel: UILabel!
     @IBOutlet weak var coffeeLabel: UILabel!
     @IBOutlet weak var waterNeededLabel: UILabel!
     @IBOutlet weak var brewTimeLabel: UILabel!
@@ -96,7 +97,7 @@ extension BrewController {
     
     fileprivate func evaluate() {
         switch method {
-            case .drip, .auto:
+            case .drip:
                 water = Int(round(Float(grams)*(500/30)))
             case .frenchPress:
                 water = Int(round(Float(grams)*(900/60)))
@@ -109,20 +110,15 @@ extension BrewController {
         waterNeededLabel.text = "Water"
         brewTimeLabel.text = "Time"
         
-        //Add later:
-        /*ozLabel.text = "~" + String(water/28) + " oz"
-        literLabel.text = "~" + String(Float(water)/1000) + " liter"*/
-        
         switch method {
             case .drip:
                 timeLabel.text = "3 - 4 min"
-                typeLabel.text = "Drip"
+                typeBrewLabel.text = "Pour-over"
+                aboutBrewMethodLabel.text = Constants.aboutDrip
             case .frenchPress:
                 timeLabel.text = "4 min"
-                typeLabel.text = "French Press"
-            case .auto:
-                timeLabel.text = "4 min"
-                typeLabel.text = "Auto"
+                typeBrewLabel.text = "French Press"
+                aboutBrewMethodLabel.text = Constants.aboutFrenchPress
         }
     }
 }

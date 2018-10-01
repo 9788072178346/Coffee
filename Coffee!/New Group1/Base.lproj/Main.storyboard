@@ -73,9 +73,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="French Press" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXu-o6-Ho7">
-                                <rect key="frame" x="20" y="63.999999999999986" width="264" height="150.66666666666663"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="63"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Pour-over" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="PXu-o6-Ho7">
+                                <rect key="frame" x="20" y="64" width="264" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="83" id="1Fd-Hh-BNR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="57"/>
                                 <color key="textColor" red="0.93163050520000001" green="0.28899933709999998" blue="0.093077007609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -175,21 +178,35 @@
                                     <constraint firstItem="pKQ-vP-EuQ" firstAttribute="height" secondItem="rj3-VF-G1W" secondAttribute="height" id="5d9-N4-WLO"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJZ-3Z-bA9">
+                                <rect key="frame" x="20" y="238" width="310" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="144" id="ZJt-EF-kk0"/>
+                                    <constraint firstAttribute="width" constant="310" id="b9r-Il-xHu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FMb-R3-hc0" firstAttribute="trailing" secondItem="CZQ-dk-Gu5" secondAttribute="trailing" constant="83.670000000000002" id="1i2-5D-YKu"/>
                             <constraint firstItem="lw6-ly-y1Z" firstAttribute="leading" secondItem="FMb-R3-hc0" secondAttribute="leading" constant="23" id="38q-KU-BbF"/>
+                            <constraint firstItem="lw6-ly-y1Z" firstAttribute="top" secondItem="jJZ-3Z-bA9" secondAttribute="bottom" constant="3.6699999999999999" id="GbL-bm-62I"/>
                             <constraint firstItem="CZQ-dk-Gu5" firstAttribute="top" secondItem="IBs-YH-5AU" secondAttribute="bottom" constant="43.670000000000002" id="I0G-TV-iEj"/>
+                            <constraint firstItem="jJZ-3Z-bA9" firstAttribute="top" secondItem="PXu-o6-Ho7" secondAttribute="bottom" constant="8" id="K8Y-ce-4is"/>
                             <constraint firstItem="IBs-YH-5AU" firstAttribute="centerY" secondItem="Zfe-Ce-37w" secondAttribute="centerY" id="QOg-8A-VaB"/>
                             <constraint firstItem="euC-xZ-uJC" firstAttribute="leading" secondItem="FMb-R3-hc0" secondAttribute="leading" constant="23" id="Wd7-sF-oCt"/>
                             <constraint firstItem="IBs-YH-5AU" firstAttribute="centerY" secondItem="Zfe-Ce-37w" secondAttribute="centerY" id="WlC-dQ-NCA"/>
                             <constraint firstItem="FMb-R3-hc0" firstAttribute="trailing" secondItem="PXu-o6-Ho7" secondAttribute="trailing" constant="130" id="YEW-lD-fsD"/>
+                            <constraint firstItem="jJZ-3Z-bA9" firstAttribute="leading" secondItem="FMb-R3-hc0" secondAttribute="leading" constant="20" id="YH7-Jb-fIe"/>
                             <constraint firstItem="FMb-R3-hc0" firstAttribute="trailing" secondItem="euC-xZ-uJC" secondAttribute="trailing" constant="84.329999999999998" id="YsV-ep-4Q6"/>
                             <constraint firstItem="PXu-o6-Ho7" firstAttribute="top" secondItem="FMb-R3-hc0" secondAttribute="top" id="d1x-mi-I16"/>
                             <constraint firstItem="CZQ-dk-Gu5" firstAttribute="leading" secondItem="FMb-R3-hc0" secondAttribute="leading" constant="23" id="dbH-FM-w1b"/>
                             <constraint firstItem="euC-xZ-uJC" firstAttribute="top" secondItem="CZQ-dk-Gu5" secondAttribute="bottom" constant="8" id="eeL-fs-tNQ"/>
+                            <constraint firstItem="FMb-R3-hc0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jJZ-3Z-bA9" secondAttribute="trailing" symbolic="YES" id="h5W-la-YDC"/>
                             <constraint firstItem="lw6-ly-y1Z" firstAttribute="centerY" secondItem="Zfe-Ce-37w" secondAttribute="centerY" id="jka-oQ-c71"/>
                             <constraint firstItem="FMb-R3-hc0" firstAttribute="trailing" secondItem="IBs-YH-5AU" secondAttribute="trailing" constant="84" id="r93-6s-qb8"/>
                             <constraint firstItem="PXu-o6-Ho7" firstAttribute="leading" secondItem="FMb-R3-hc0" secondAttribute="leading" constant="20" id="tba-a7-hAi"/>
@@ -200,10 +217,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6Ny-nq-yQe"/>
                     <connections>
+                        <outlet property="aboutBrewMethodLabel" destination="jJZ-3Z-bA9" id="b0C-AV-kTe"/>
                         <outlet property="brewTimeLabel" destination="m4q-JW-Kmx" id="1Oa-H1-exv"/>
                         <outlet property="coffeeLabel" destination="QW6-eU-V6a" id="bQr-ma-mTm"/>
                         <outlet property="timeLabel" destination="7Ko-cz-jwV" id="H5e-24-HwS"/>
-                        <outlet property="typeLabel" destination="PXu-o6-Ho7" id="rto-vo-EP6"/>
+                        <outlet property="typeBrewLabel" destination="PXu-o6-Ho7" id="rto-vo-EP6"/>
                         <outlet property="waterLabel" destination="KRM-DG-pkE" id="crU-Av-gph"/>
                         <outlet property="waterNeededLabel" destination="TZS-je-yym" id="fRa-WS-NwI"/>
                     </connections>
@@ -244,7 +262,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Another coffee" translatesAutoresizingMaskIntoConstraints="NO" id="CKK-Bq-sba">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Another coffee" translatesAutoresizingMaskIntoConstraints="NO" id="CKK-Bq-sba">
                                 <rect key="frame" x="60.666666666666657" y="183.66666666666663" width="293" height="369"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="369" id="J36-8O-fVe"/>
@@ -272,7 +290,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="AfO-uA-OAe">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="AfO-uA-OAe">
                                 <rect key="frame" x="60.666666666666657" y="183.66666666666663" width="293" height="369"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="369" id="TpZ-2C-6QZ"/>
@@ -292,40 +310,11 @@
             </objects>
             <point key="canvasLocation" x="1187" y="1299"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="rTV-6a-VsX">
-            <objects>
-                <viewController storyboardIdentifier="autoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="COv-C6-8RY" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fru-yO-f0p">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="rXf-v4-lgO">
-                                <rect key="frame" x="60.666666666666657" y="183.66666666666663" width="293" height="369"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="369" id="39v-IK-rOv"/>
-                                    <constraint firstAttribute="width" constant="293" id="IeW-94-IkX"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rXf-v4-lgO" firstAttribute="centerX" secondItem="Fru-yO-f0p" secondAttribute="centerX" id="qSJ-QV-iS7"/>
-                            <constraint firstItem="rXf-v4-lgO" firstAttribute="centerY" secondItem="Fru-yO-f0p" secondAttribute="centerY" id="uR0-sh-wpo"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Eku-s7-muT"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c7J-MD-tSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1880" y="1299"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="Another coffee" width="640" height="1136"/>
-        <image name="Coffee" width="736" height="1308"/>
+        <image name="Another coffee" width="365" height="365"/>
+        <image name="Coffee" width="640" height="640"/>
         <image name="Down" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="Image" width="62.880001068115234" height="73.44000244140625"/>
         <image name="Up" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
     <color key="tintColor" red="0.075534326420000006" green="0.075534326420000006" blue="0.075534326420000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

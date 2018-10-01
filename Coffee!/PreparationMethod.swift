@@ -9,5 +9,4 @@
 enum PreparationMethod: Int {
     case drip = 0
     case frenchPress = 1
-    case auto = 2
 }
