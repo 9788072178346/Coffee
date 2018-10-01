@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qE0-4L-pJm">
-                                <rect key="frame" x="66.666666666666686" y="333" width="281" height="71"/>
+                                <rect key="frame" x="66.666666666666686" y="536" width="281" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="PLE-OS-XnR"/>
                                 </constraints>
@@ -48,11 +48,23 @@
                                     <segue destination="ERo-15-4xK" kind="show" identifier="segueToBrew" id="fAq-jn-vCr"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qT-TV-Yck">
+                                <rect key="frame" x="58.666666666666657" y="221" width="297" height="294"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="Yjp-st-AGM"/>
+                                    <constraint firstAttribute="height" constant="294" id="yOa-3f-ez0"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="9n5-CG-bU9" kind="embed" id="rbT-Kx-Hu4"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4qT-TV-Yck" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3DZ-X3-XTk"/>
+                            <constraint firstItem="7yF-5F-DB6" firstAttribute="top" secondItem="qE0-4L-pJm" secondAttribute="bottom" constant="43" id="Fnm-9m-4mq"/>
                             <constraint firstItem="7yF-5F-DB6" firstAttribute="top" relation="lessThanOrEqual" secondItem="QFb-6o-nlE" secondAttribute="top" constant="650" id="Gaj-ph-3uS"/>
-                            <constraint firstItem="qE0-4L-pJm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NWm-DD-KoR"/>
+                            <constraint firstItem="4qT-TV-Yck" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L2b-MQ-lom"/>
                             <constraint firstItem="7yF-5F-DB6" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QFb-6o-nlE" secondAttribute="trailing" id="bHb-wO-9Mb"/>
                             <constraint firstItem="QFb-6o-nlE" firstAttribute="bottom" secondItem="7yF-5F-DB6" secondAttribute="bottom" constant="10" id="bNC-X4-vzv"/>
                             <constraint firstItem="7yF-5F-DB6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QFb-6o-nlE" secondAttribute="leading" id="cPd-gS-xXe"/>
@@ -69,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188.4057971014495" y="130.43478260869566"/>
+            <point key="canvasLocation" x="1186.9565217391305" y="132.88043478260872"/>
         </scene>
         <!--Brew Controller-->
         <scene sceneID="52p-dO-ven">
@@ -232,9 +244,104 @@
             </objects>
             <point key="canvasLocation" x="420" y="133"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="MGu-6K-uEa">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="9n5-CG-bU9" customClass="PageViewController" customModule="Coffee_" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMR-IY-7GV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="788"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3eL-eu-KVC">
+            <objects>
+                <viewController storyboardIdentifier="frenchPressView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TB5-6p-hjZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Hi-Li-WVR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Another coffee" translatesAutoresizingMaskIntoConstraints="NO" id="CKK-Bq-sba">
+                                <rect key="frame" x="87" y="248" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="J36-8O-fVe"/>
+                                    <constraint firstAttribute="width" constant="240" id="Xe7-D1-7cP"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CKK-Bq-sba" firstAttribute="centerY" secondItem="4Hi-Li-WVR" secondAttribute="centerY" id="5L3-Bi-9nU"/>
+                            <constraint firstItem="CKK-Bq-sba" firstAttribute="centerX" secondItem="4Hi-Li-WVR" secondAttribute="centerX" id="Jcc-Se-4Gw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VtR-fg-b4N"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBN-DE-kaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505.79710144927537" y="1298.6413043478262"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AEL-FV-8vI">
+            <objects>
+                <viewController storyboardIdentifier="dripView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Mz-fY-li9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XEt-lv-l5z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="KjL-8j-HVC">
+                                <rect key="frame" x="87" y="248" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="32J-BQ-GuM"/>
+                                    <constraint firstAttribute="width" constant="240" id="KJy-tO-Qkr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KjL-8j-HVC" firstAttribute="centerX" secondItem="XEt-lv-l5z" secondAttribute="centerX" id="J1W-hO-stv"/>
+                            <constraint firstItem="KjL-8j-HVC" firstAttribute="centerY" secondItem="XEt-lv-l5z" secondAttribute="centerY" id="c55-GO-6Wf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rNB-mt-VPW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TUy-7n-Pqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="1299"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rTV-6a-VsX">
+            <objects>
+                <viewController storyboardIdentifier="autoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="COv-C6-8RY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fru-yO-f0p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="ixS-Yn-gIV">
+                                <rect key="frame" x="87" y="248" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Z1W-ak-x6T"/>
+                                    <constraint firstAttribute="width" constant="240" id="jNC-R3-fwU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ixS-Yn-gIV" firstAttribute="centerY" secondItem="Fru-yO-f0p" secondAttribute="centerY" id="Pka-86-T5w"/>
+                            <constraint firstItem="ixS-Yn-gIV" firstAttribute="centerX" secondItem="Fru-yO-f0p" secondAttribute="centerX" id="eUC-2r-ULF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Eku-s7-muT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c7J-MD-tSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880" y="1299"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Another coffee" width="640" height="1136"/>
+        <image name="Coffee" width="736" height="1308"/>
         <image name="Down" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Image" width="62.880001068115234" height="73.44000244140625"/>
         <image name="Up" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
     <color key="tintColor" red="0.075534326420000006" green="0.075534326420000006" blue="0.075534326420000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

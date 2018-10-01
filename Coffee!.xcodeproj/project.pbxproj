@@ -15,6 +15,7 @@
 		3353071B20E801F20098CC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3353071A20E801F20098CC10 /* Assets.xcassets */; };
 		3353071E20E801F20098CC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353071C20E801F20098CC10 /* LaunchScreen.storyboard */; };
 		338AF346211C55E200814528 /* BrewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338AF345211C55E200814528 /* BrewController.swift */; };
+		339BA53D21618B0600F7D9E7 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339BA53C21618B0600F7D9E7 /* PageViewController.swift */; };
 		33FD76122154E7FC002CE834 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FD76112154E7FC002CE834 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		3353071F20E801F20098CC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3353072420E801F20098CC10 /* Coffee!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		338AF345211C55E200814528 /* BrewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewController.swift; sourceTree = "<group>"; };
+		339BA53C21618B0600F7D9E7 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		33FD76112154E7FC002CE834 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 			children = (
 				3353071220E801F10098CC10 /* ViewController.swift */,
 				338AF345211C55E200814528 /* BrewController.swift */,
+				339BA53C21618B0600F7D9E7 /* PageViewController.swift */,
 			);
 			name = ViewControllers;
 			path = ViewController;
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				333184B22153C92400D7DC9C /* PreparationMethod.swift in Sources */,
+				339BA53D21618B0600F7D9E7 /* PageViewController.swift in Sources */,
 				332268712142CC140068FEA2 /* ViewController+Extensions.swift in Sources */,
 				3353071320E801F10098CC10 /* ViewController.swift in Sources */,
 				3353071120E801F10098CC10 /* AppDelegate.swift in Sources */,

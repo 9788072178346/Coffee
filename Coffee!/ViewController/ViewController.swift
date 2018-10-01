@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         }
         
         vc.method = method
-    }
+        }
     
     //MARK: - Custom functions
     
@@ -48,3 +48,4 @@ class ViewController: UIViewController {
         selectedSegmentIndex = segmentedControl.selectedSegmentIndex
     }
 }
+
