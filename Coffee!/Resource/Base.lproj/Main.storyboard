@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qT-TV-Yck">
-                                <rect key="frame" x="11.5" y="44" width="297" height="387"/>
+                                <rect key="frame" x="11.5" y="123" width="297" height="308"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="297" id="Yjp-st-AGM"/>
-                                    <constraint firstAttribute="height" constant="387" id="yOa-3f-ez0"/>
+                                    <constraint firstAttribute="height" constant="308" id="yOa-3f-ez0"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="9n5-CG-bU9" kind="embed" identifier="" id="rbT-Kx-Hu4"/>
@@ -57,7 +57,7 @@
                         <constraints>
                             <constraint firstItem="4qT-TV-Yck" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3DZ-X3-XTk"/>
                             <constraint firstItem="7yF-5F-DB6" firstAttribute="top" relation="lessThanOrEqual" secondItem="QFb-6o-nlE" secondAttribute="top" constant="650" id="Gaj-ph-3uS"/>
-                            <constraint firstItem="4qT-TV-Yck" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-46.5" id="L2b-MQ-lom"/>
+                            <constraint firstItem="4qT-TV-Yck" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-7" id="L2b-MQ-lom"/>
                             <constraint firstItem="7yF-5F-DB6" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QFb-6o-nlE" secondAttribute="trailing" constant="-136" id="bHb-wO-9Mb"/>
                             <constraint firstItem="QFb-6o-nlE" firstAttribute="bottom" secondItem="7yF-5F-DB6" secondAttribute="bottom" constant="77" id="bNC-X4-vzv"/>
                             <constraint firstItem="7yF-5F-DB6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QFb-6o-nlE" secondAttribute="leading" id="cPd-gS-xXe"/>
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1185.5072463768117" y="131.25"/>
+            <point key="canvasLocation" x="1185" y="130.98591549295776"/>
         </scene>
         <!--Brew Controller-->
         <scene sceneID="52p-dO-ven">
@@ -223,6 +223,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="FMb-R3-hc0" firstAttribute="bottom" secondItem="bs8-bb-2LH" secondAttribute="bottom" constant="45" id="7zT-Or-7WR"/>
                             <constraint firstItem="jJZ-3Z-bA9" firstAttribute="top" secondItem="PXu-o6-Ho7" secondAttribute="bottom" constant="8" id="K8Y-ce-4is"/>
                             <constraint firstItem="bs8-bb-2LH" firstAttribute="top" secondItem="jJZ-3Z-bA9" secondAttribute="bottom" constant="7.5" id="OBj-oz-Z9k"/>
                             <constraint firstItem="FMb-R3-hc0" firstAttribute="trailing" secondItem="jJZ-3Z-bA9" secondAttribute="trailing" constant="20" id="SC0-20-YtN"/>
@@ -331,8 +332,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Another coffee" width="365" height="365"/>
-        <image name="Coffee" width="640" height="640"/>
+        <image name="Another coffee" width="165" height="403"/>
+        <image name="Coffee" width="421" height="493"/>
         <image name="Down" width="51.200000762939453" height="51.200000762939453"/>
         <image name="Up" width="51.200000762939453" height="51.200000762939453"/>
     </resources>

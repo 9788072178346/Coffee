@@ -21,12 +21,12 @@ class BrewController: UIViewController {
     var grams = 30
     var water = 0
     
-    var method: PreparationMethod = PreparationMethod(rawValue: Constants.pendingIndex) ?? .drip
+    var method: PreparationMethod = PreparationMethod(rawValue: Var.pendingIndex) ?? .drip
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController!.navigationBar.topItem!.title = ""
+        navigationController!.navigationBar.topItem!.title = ""
 
         setTransparentNavigationBar()
         
@@ -67,10 +67,8 @@ class BrewController: UIViewController {
         switch grams {
         case 0:
             createAlert(title: Constants.noCoffeeTitle, message: Constants.noCoffeeMessage, value: 1, includeCloseAlert: false)
-            break
         case 14:
             createAlert(title: Constants.areYouSureTitle, message: Constants.notEnoughCoffeeMessage, value: 15, includeCloseAlert: true)
-            break
         default:
             break
         }
@@ -83,10 +81,8 @@ class BrewController: UIViewController {
         switch grams {
         case 46:
             createAlert(title: Constants.areYouSureTitle, message: Constants.aLotOfCoffeeMessage, value: 30, includeCloseAlert: true)
-            break
         case 99:
             createAlert(title: Constants.tooMuchTitle, message: Constants.tooMuchCoffeeMessage, value: 30, includeCloseAlert: false)
-            break
         default:
             break
         }

@@ -8,7 +8,60 @@
 
 import UIKit
 
-class PageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class PageViewController: UIPageViewController {
+    
+    let pageControl = UIPageControl()
+    let vc = ViewController()
+    
+    private(set) lazy var brewOptionsViewControllers: [UIViewController] = {
+        return [newViewController(brewMethod: "drip"),
+                newViewController(brewMethod: "frenchPress")
+            ]
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        dataSource = self
+        delegate = self
+        
+        setPageControl()
+        
+        if let firstViewController = brewOptionsViewControllers.first {
+            setViewControllers([firstViewController],
+                               direction: .forward,
+                               animated: true,
+                               completion: nil)
+        }
+
+    }
+    
+    //MARK: - Functions
+    
+    private func setPageControl() {
+        pageControl.frame = CGRect()
+        pageControl.currentPageIndicatorTintColor = UIColor.black
+        pageControl.pageIndicatorTintColor = UIColor.lightGray
+        pageControl.numberOfPages = brewOptionsViewControllers.count
+        pageControl.currentPage = 0
+        view.addSubview(pageControl)
+        
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -5).isActive = true
+        pageControl.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20).isActive = true
+        pageControl.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+
+    private func newViewController(brewMethod: String) -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: nil) .
+            instantiateViewController(withIdentifier: "\(brewMethod)View")
+    }
+}
+
+extension PageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    
+    //MARK: - Protocol functions
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
@@ -46,7 +99,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         }
         
         return brewOptionsViewControllers[nextIndex]
-        
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
@@ -54,54 +106,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
         if let viewControllers = pageViewController.viewControllers {
             if let viewControllerIndex = brewOptionsViewControllers.index(of: viewControllers[0]) {
                 pageControl.currentPage = viewControllerIndex
-                Constants.pendingIndex = pageControl.currentPage
+                Var.pendingIndex = pageControl.currentPage
             }
         }
     }
-    
-    let pageControl = UIPageControl()
-    
-    private(set) lazy var brewOptionsViewControllers: [UIViewController] = {
-        return [self.newViewController(brewMethod: "drip"),
-                self.newViewController(brewMethod: "frenchPress")
-            ]
-    }()
-    
-    private func newViewController(brewMethod: String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewController(withIdentifier: "\(brewMethod)View")
-    }
-    
-    private func setPageControl() {
-        pageControl.frame = CGRect()
-        pageControl.currentPageIndicatorTintColor = UIColor.black
-        pageControl.pageIndicatorTintColor = UIColor.lightGray
-        pageControl.numberOfPages = brewOptionsViewControllers.count
-        pageControl.currentPage = 0
-        view.addSubview(self.pageControl)
-        
-        pageControl.translatesAutoresizingMaskIntoConstraints = false
-        pageControl.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -5).isActive = true
-        pageControl.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -20).isActive = true
-        pageControl.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        pageControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        dataSource = self
-        delegate = self
-        
-        setPageControl()
-        
-        if let firstViewController = brewOptionsViewControllers.first {
-            setViewControllers([firstViewController],
-                               direction: .forward,
-                               animated: true,
-                               completion: nil)
-        }
-
-    }
-
 }
