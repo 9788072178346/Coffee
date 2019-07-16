@@ -65,7 +65,7 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-        guard let viewControllerIndex = brewOptionsViewControllers.index(of: viewController) else {
+        guard let viewControllerIndex = brewOptionsViewControllers.firstIndex(of: viewController) else {
             return nil
         }
         
@@ -84,7 +84,7 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        guard let viewControllerIndex = brewOptionsViewControllers.index(of: viewController) else {
+        guard let viewControllerIndex = brewOptionsViewControllers.firstIndex(of: viewController) else {
             return nil
         }
         
@@ -104,7 +104,7 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         if let viewControllers = pageViewController.viewControllers {
-            if let viewControllerIndex = brewOptionsViewControllers.index(of: viewControllers[0]) {
+            if let viewControllerIndex = brewOptionsViewControllers.firstIndex(of: viewControllers[0]) {
                 pageControl.currentPage = viewControllerIndex
                 Var.pendingIndex = pageControl.currentPage
             }
