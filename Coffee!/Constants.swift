@@ -8,6 +8,9 @@
 
 struct Constants {
     
+    static let frenchPress = "FRENCH PRESS"
+    static let drip = "POUR-OVER"
+    
     static let segueToBrew = "segueToBrew"
     
     static let defaultStyleTitle = "You're right"
@@ -24,8 +27,5 @@ struct Constants {
     static let aboutDrip = "Brewed coffee done with pour-over method is made by pouring hot water onto ground coffee beans. It is said to provide the most clarity of flavour as it achieves a nuanced, well-rounded drink."
     static let aboutFrenchPress = "French press, method of choice of many, is beautiful in its simplicity. The secret of creating an earthy and rich taste is in the grind: medium, with uniformity and consistency throughout."
     
-}
-
-struct Var {
-    static var pendingIndex = 0
+    static let indexKey = "pendingIndexKey"
 }

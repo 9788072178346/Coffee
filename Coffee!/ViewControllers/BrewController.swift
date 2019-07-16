@@ -9,7 +9,7 @@
 import UIKit
 
 class BrewController: UIViewController {
-    
+        
     @IBOutlet weak var typeBrewLabel: UILabel!
     @IBOutlet weak var aboutBrewMethodLabel: UILabel!
     @IBOutlet weak var coffeeLabel: UILabel!
@@ -21,11 +21,14 @@ class BrewController: UIViewController {
     var grams = 30
     var water = 0
     
-    var method: PreparationMethod = PreparationMethod(rawValue: Var.pendingIndex) ?? .drip
+    var method: PreparationMethod = .drip
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let currentIndex = UserDefaults.standard.integer(forKey: Constants.indexKey)
+        method = PreparationMethod(rawValue: currentIndex)!
+                
         navigationController!.navigationBar.topItem!.title = ""
 
         setTransparentNavigationBar()
@@ -35,7 +38,7 @@ class BrewController: UIViewController {
         setUpLabels()
     }
     
-    //MARK: - Custom functions
+    // MARK: - Custom functions
     
     func createAlert(title: String, message: String, value: Int, includeCloseAlert: Bool) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -58,7 +61,7 @@ class BrewController: UIViewController {
         updateCoffeeLabelValue(value: grams)
     }
     
-    //MARK: - Actions
+    // MARK: - Actions
     
     @IBAction func tapDown(_ sender: UIButton) {
         grams -= 1

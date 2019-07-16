@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8YR-pH-w7X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8YR-pH-w7X">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,26 +19,23 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qT-TV-Yck">
-                                <rect key="frame" x="59" y="94" width="296" height="371"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="296" id="Yjp-st-AGM"/>
-                                    <constraint firstAttribute="height" constant="371" id="yOa-3f-ez0"/>
-                                </constraints>
+                                <rect key="frame" x="15" y="124" width="384" height="331"/>
                                 <connections>
                                     <segue destination="9n5-CG-bU9" kind="embed" identifier="" id="rbT-Kx-Hu4"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yF-5F-DB6">
-                                <rect key="frame" x="115" y="624" width="184" height="35"/>
+                                <rect key="frame" x="69.666666666666686" y="485" width="275" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="7yF-5F-DB6" secondAttribute="height" multiplier="394:51" constant="-86.392156862745082" id="hQE-X1-JRK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="5Ct-TX-Wvk"/>
+                                    <constraint firstAttribute="height" constant="45" id="dLA-8c-kw9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Brew.">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Brew">
+                                    <color key="titleColor" red="0.93163050520000001" green="0.28899933709999998" blue="0.093077007609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.93163050520000001" green="0.28899933709999998" blue="0.093077007609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" red="0.0085411269430000006" green="0.0085411269430000006" blue="0.0085411269430000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,16 +49,23 @@
                                     <segue destination="ERo-15-4xK" kind="show" identifier="segueToBrew" id="fAq-jn-vCr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POUR-OVER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93I-PR-ezt">
+                                <rect key="frame" x="157" y="93.666666666666671" width="100.33333333333331" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4qT-TV-Yck" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3DZ-X3-XTk"/>
-                            <constraint firstItem="7yF-5F-DB6" firstAttribute="top" relation="lessThanOrEqual" secondItem="QFb-6o-nlE" secondAttribute="top" constant="650" id="Gaj-ph-3uS"/>
-                            <constraint firstItem="4qT-TV-Yck" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-88.5" id="L2b-MQ-lom"/>
-                            <constraint firstItem="7yF-5F-DB6" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QFb-6o-nlE" secondAttribute="trailing" constant="-136" id="bHb-wO-9Mb"/>
-                            <constraint firstItem="QFb-6o-nlE" firstAttribute="bottom" secondItem="7yF-5F-DB6" secondAttribute="bottom" constant="77" id="bNC-X4-vzv"/>
-                            <constraint firstItem="7yF-5F-DB6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QFb-6o-nlE" secondAttribute="leading" id="cPd-gS-xXe"/>
-                            <constraint firstItem="7yF-5F-DB6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kap-Hc-gaM"/>
+                            <constraint firstItem="QFb-6o-nlE" firstAttribute="trailing" secondItem="4qT-TV-Yck" secondAttribute="trailing" constant="15" id="WPc-Cc-EPN"/>
+                            <constraint firstItem="4qT-TV-Yck" firstAttribute="top" secondItem="QFb-6o-nlE" secondAttribute="top" constant="60" id="Y9I-o3-EMU"/>
+                            <constraint firstItem="7yF-5F-DB6" firstAttribute="top" secondItem="4qT-TV-Yck" secondAttribute="bottom" constant="30" id="Z7q-JP-SUL"/>
+                            <constraint firstItem="93I-PR-ezt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aep-LM-TJt"/>
+                            <constraint firstItem="4qT-TV-Yck" firstAttribute="top" secondItem="93I-PR-ezt" secondAttribute="bottom" constant="10" id="di4-Ol-x1t"/>
+                            <constraint firstItem="QFb-6o-nlE" firstAttribute="bottom" secondItem="7yF-5F-DB6" secondAttribute="bottom" constant="206" id="rXK-io-Cfi"/>
+                            <constraint firstItem="4qT-TV-Yck" firstAttribute="leading" secondItem="QFb-6o-nlE" secondAttribute="leading" constant="15" id="s65-Eu-GkC"/>
+                            <constraint firstItem="7yF-5F-DB6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vO3-TD-aQQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QFb-6o-nlE"/>
                     </view>
@@ -69,6 +73,7 @@
                     <connections>
                         <outlet property="brewButton" destination="7yF-5F-DB6" id="5dl-Q1-gtp"/>
                         <outlet property="coffeeLabel" destination="QW6-eU-V6a" id="leb-B5-o6Q"/>
+                        <outlet property="methodLabel" destination="93I-PR-ezt" id="qrK-1Z-Ljh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -282,18 +287,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Another coffee" translatesAutoresizingMaskIntoConstraints="NO" id="CKK-Bq-sba">
-                                <rect key="frame" x="24.666666666666657" y="89" width="365" height="558"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Another coffee" translatesAutoresizingMaskIntoConstraints="NO" id="CKK-Bq-sba">
+                                <rect key="frame" x="57" y="391" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="558" id="J36-8O-fVe"/>
-                                    <constraint firstAttribute="width" constant="365" id="Xe7-D1-7cP"/>
+                                    <constraint firstAttribute="height" constant="300" id="7XV-5x-UDd"/>
+                                    <constraint firstAttribute="width" constant="300" id="A9b-zp-0jU"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="CKK-Bq-sba" firstAttribute="centerY" secondItem="4Hi-Li-WVR" secondAttribute="centerY" id="5L3-Bi-9nU"/>
                             <constraint firstItem="CKK-Bq-sba" firstAttribute="centerX" secondItem="4Hi-Li-WVR" secondAttribute="centerX" id="Jcc-Se-4Gw"/>
+                            <constraint firstItem="VtR-fg-b4N" firstAttribute="bottom" secondItem="CKK-Bq-sba" secondAttribute="bottom" constant="45" id="eHs-Xc-eLd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VtR-fg-b4N"/>
                     </view>
@@ -310,32 +315,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="AfO-uA-OAe">
-                                <rect key="frame" x="61" y="184" width="293" height="369"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffee" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfO-uA-OAe">
+                                <rect key="frame" x="57" y="421" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="369" id="TpZ-2C-6QZ"/>
-                                    <constraint firstAttribute="width" constant="293" id="p5q-4z-yBi"/>
+                                    <constraint firstAttribute="width" constant="300" id="ZXe-xd-OBE"/>
+                                    <constraint firstAttribute="height" constant="300" id="cMf-ys-1Wx"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rNB-mt-VPW" firstAttribute="bottom" secondItem="AfO-uA-OAe" secondAttribute="bottom" constant="15" id="Azf-cR-Ob9"/>
                             <constraint firstItem="AfO-uA-OAe" firstAttribute="centerX" secondItem="XEt-lv-l5z" secondAttribute="centerX" id="J2P-Mj-EHU"/>
-                            <constraint firstItem="AfO-uA-OAe" firstAttribute="centerY" secondItem="XEt-lv-l5z" secondAttribute="centerY" constant="0.5" id="viJ-AJ-X9t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rNB-mt-VPW"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUy-7n-Pqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1209" y="1365"/>
+            <point key="canvasLocation" x="1208.6956521739132" y="1364.6739130434785"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Another coffee" width="165" height="403"/>
-        <image name="Coffee" width="421" height="493"/>
-        <image name="Down" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="Up" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="Another coffee" width="82.5" height="201.5"/>
+        <image name="Coffee" width="140.33332824707031" height="164.33332824707031"/>
+        <image name="Down" width="32" height="32"/>
+        <image name="Up" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.075534326420000006" green="0.075534326420000006" blue="0.075534326420000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

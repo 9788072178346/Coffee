@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class PageViewController: UIPageViewController {
     
@@ -36,7 +37,7 @@ class PageViewController: UIPageViewController {
 
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     private func setPageControl() {
         pageControl.frame = CGRect()
@@ -61,7 +62,7 @@ class PageViewController: UIPageViewController {
 
 extension PageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    //MARK: - Protocol functions
+    // MARK: - Protocol functions
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
@@ -105,8 +106,12 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
         
         if let viewControllers = pageViewController.viewControllers {
             if let viewControllerIndex = brewOptionsViewControllers.firstIndex(of: viewControllers[0]) {
+                if pageControl.currentPage != viewControllerIndex {
+                    NotificationCenter.default.post(name: Notification.Name(".pageTransitionOccured"), object: nil)
+                }
+                
                 pageControl.currentPage = viewControllerIndex
-                Var.pendingIndex = pageControl.currentPage
+                UserDefaults.standard.set(pageControl.currentPage, forKey: Constants.indexKey)
             }
         }
     }
